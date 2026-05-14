@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SiPedes</string>
+    <string name="app_subtitle">Sistem Informasi Pembangunan Desa</string>
+    <string name="app_tagline">Bina Desa Digital</string>
+    <string name="welcome_title">Selamat Datang</string>
+    <string name="welcome_desc">Masuk ke akun Anda untuk mengakses layanan informasi pembangunan desa digital</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Masuk</string>
+    <string name="login_failed">Username atau Password salah</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="menu_rumus">Rumus Bangun</string>
+    <string name="menu_program">Program Desa</string>
+    <string name="menu_potensi">Potensi Desa</string>
+    <string name="menu_website">Website SiPedes</string>
+    <string name="menu_logout">Logout</string>
+    <string name="logout_confirm_title">Konfirmasi Logout</string>
+    <string name="logout_confirm_msg">Apakah Anda yakin ingin keluar dari aplikasi?</string>
+    <string name="yes">Ya, Keluar</string>
+    <string name="no">Batal</string>
+    <string name="logout_cancelled">Logout dibatalkan</string>
+    <string name="rumus_title">Rumus Bangun</string>
+    <string name="program_title">Program Desa</string>
+    <string name="potensi_title">Potensi Desa</string>
+    <string name="website_title">Website SiPedes</string>
+</resources>
