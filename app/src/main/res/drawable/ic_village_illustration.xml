@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="160dp"
+    android:viewportWidth="280"
+    android:viewportHeight="160">
+
+    <!-- Sky background -->
+    <path android:fillColor="#E3F2FD"
+        android:pathData="M0,0 L280,0 L280,110 L0,110 Z"/>
+
+    <!-- Ground -->
+    <path android:fillColor="#A5D6A7"
+        android:pathData="M0,110 L280,110 L280,160 L0,160 Z"/>
+
+    <!-- Sun -->
+    <path android:fillColor="#FFD54F"
+        android:pathData="M230,30 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0"/>
+
+    <!-- Clouds -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M40,20 Q45,14 52,16 Q56,10 64,12 Q72,10 75,16 Q82,14 84,20 Q84,26 78,26 L46,26 Q40,26 40,20"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M150,15 Q155,9 162,11 Q166,5 174,7 Q182,5 185,11 Q192,9 194,15 Q194,21 188,21 L156,21 Q150,21 150,15"/>
+
+    <!-- Big House / Balai Desa -->
+    <path android:fillColor="#4CAF50"
+        android:pathData="M90,110 L90,60 L140,60 L140,110 Z"/>
+    <path android:fillColor="#2E7D32"
+        android:pathData="M82,64 L115,42 L148,64 Z"/>
+    <path android:fillColor="#1B5E20"
+        android:pathData="M100,60 L115,50 L130,60 Z"/>
+    <!-- Door -->
+    <path android:fillColor="#1B5E20"
+        android:pathData="M107,110 L107,92 Q107,88 111,88 L119,88 Q123,88 123,92 L123,110 Z"/>
+    <!-- Windows -->
+    <path android:fillColor="#90CAF9"
+        android:pathData="M94,70 L104,70 L104,82 L94,82 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M126,70 L136,70 L136,82 L126,82 Z"/>
+    <!-- Flag -->
+    <path android:fillColor="#FFFFFF"
+        android:strokeColor="#B0BEC5"
+        android:strokeWidth="1"
+        android:pathData="M115,42 L115,30"/>
+    <path android:fillColor="#E53935"
+        android:pathData="M115,30 L125,33 L115,36 Z"/>
+
+    <!-- Small house left -->
+    <path android:fillColor="#81C784"
+        android:pathData="M20,110 L20,78 L55,78 L55,110 Z"/>
+    <path android:fillColor="#388E3C"
+        android:pathData="M14,82 L37,62 L60,82 Z"/>
+    <path android:fillColor="#2E7D32"
+        android:pathData="M30,110 L30,98 Q30,95 33,95 L41,95 Q44,95 44,98 L44,110 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M22,84 L30,84 L30,94 L22,94 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M44,84 L52,84 L52,94 L44,94 Z"/>
+
+    <!-- Small house right -->
+    <path android:fillColor="#66BB6A"
+        android:pathData="M175,110 L175,80 L210,80 L210,110 Z"/>
+    <path android:fillColor="#388E3C"
+        android:pathData="M169,84 L192,64 L215,84 Z"/>
+    <path android:fillColor="#2E7D32"
+        android:pathData="M185,110 L185,98 Q185,95 188,95 L196,95 Q199,95 199,98 L199,110 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M177,86 L185,86 L185,96 L177,96 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M199,86 L207,86 L207,96 L199,96 Z"/>
+
+    <!-- WiFi tower / signal -->
+    <path android:fillColor="#546E7A"
+        android:strokeColor="#546E7A"
+        android:strokeWidth="2"
+        android:pathData="M245,110 L245,70"/>
+    <path android:fillColor="#546E7A"
+        android:pathData="M240,110 L250,110 L252,108 L238,108 Z"/>
+    <!-- Signal arcs -->
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="2.5"
+        android:pathData="M238,68 Q245,60 252,68"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="2"
+        android:pathData="M234,64 Q245,52 256,64"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1.5"
+        android:pathData="M230,60 Q245,44 260,60"/>
+
+    <!-- Trees -->
+    <path android:fillColor="#2E7D32"
+        android:pathData="M155,110 L155,88 L162,88 L162,110 Z"/>
+    <path android:fillColor="#388E3C"
+        android:pathData="M158,90 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0"/>
+    <path android:fillColor="#43A047"
+        android:pathData="M158,82 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0"/>
+
+    <path android:fillColor="#2E7D32"
+        android:pathData="M60,110 L60,94 L66,94 L66,110 Z"/>
+    <path android:fillColor="#43A047"
+        android:pathData="M63,96 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"/>
+
+    <!-- Road -->
+    <path android:fillColor="#90A4AE"
+        android:pathData="M0,118 L280,118 L280,130 L0,130 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M30,123 L60,123 L60,125 L30,125 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M100,123 L130,123 L130,125 L100,125 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M170,123 L200,123 L200,125 L170,125 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M220,123 L250,123 L250,125 L220,125 Z"/>
+
+</vector>

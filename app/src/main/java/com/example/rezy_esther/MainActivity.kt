@@ -1,51 +1,59 @@
 package com.example.rezy_esther
 
 import android.os.Bundle
-import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.example.rezy_esther.R
+import com.example.rezy_esther.databinding.ActivityMainBinding
+import com.example.rezy_esther.AboutFragment
+import com.example.rezy_esther.HomeFragment
+import com.example.rezy_esther.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Segitiga
-        val etAlas = findViewById<EditText>(R.id.etAlas)
-        val etTinggi = findViewById<EditText>(R.id.etTinggi)
-        val btnSegitiga = findViewById<Button>(R.id.btnHitungSegitiga)
-        val tvHasilSegitiga = findViewById<TextView>(R.id.tvHasilSegitiga)
-
-        btnSegitiga.setOnClickListener {
-            val alas = etAlas.text.toString().toDoubleOrNull()
-            val tinggi = etTinggi.text.toString().toDoubleOrNull()
-
-            if (alas != null && tinggi != null) {
-                val hasil = 0.5 * alas * tinggi
-                tvHasilSegitiga.text = "Hasil: $hasil"
-            } else {
-                tvHasilSegitiga.text = "Input tidak valid"
-            }
+        // Hilangkan padding bawah agar BottomNav tidak punya jarak
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+            insets
         }
 
-        // Balok
-        val etPanjang = findViewById<EditText>(R.id.etPanjang)
-        val etLebar = findViewById<EditText>(R.id.etLebar)
-        val etTinggiBalok = findViewById<EditText>(R.id.etTinggiBalok)
-        val btnBalok = findViewById<Button>(R.id.btnHitungBalok)
-        val tvHasilBalok = findViewById<TextView>(R.id.tvHasilBalok)
+        // Tampilkan HomeFragment sebagai default
+        replaceFragment(HomeFragment())
 
-        btnBalok.setOnClickListener {
-            val p = etPanjang.text.toString().toDoubleOrNull()
-            val l = etLebar.text.toString().toDoubleOrNull()
-            val t = etTinggiBalok.text.toString().toDoubleOrNull()
-
-            if (p != null && l != null && t != null) {
-                val hasil = p * l * t
-                tvHasilBalok.text = "Hasil: $hasil"
-            } else {
-                tvHasilBalok.text = "Input tidak valid"
+        // Setup BottomNavigation listener
+        binding.bottomNavView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.nav_about -> {
+                    replaceFragment(AboutFragment())
+                    true
+                }
+                R.id.nav_profile -> {
+                    replaceFragment(ProfileFragment())
+                    true
+                }
+                else -> false
             }
         }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainer.id, fragment)
+            // addToBackStack dinonaktifkan agar tombol back langsung keluar
+            .commit()
     }
 }

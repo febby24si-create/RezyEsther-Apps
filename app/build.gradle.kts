@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.rezy_esther"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36 // Disederhanakan agar stabil sesuai targetSdk Anda
 
     defaultConfig {
         applicationId = "com.example.rezy_esther"
@@ -18,6 +14,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Tambahkan blok buildFeatures ini untuk mengaktifkan View Binding
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -36,6 +37,9 @@ android {
 }
 
 dependencies {
+    // Tambahkan library Core Splashscreen di sini:
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

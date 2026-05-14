@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="140dp"
+    android:viewportWidth="280"
+    android:viewportHeight="140">
+
+    <!-- Sky -->
+    <path android:fillColor="#E3F2FD"
+        android:pathData="M0,0 L280,0 L280,90 L0,90 Z"/>
+    <!-- Ground -->
+    <path android:fillColor="#C8E6C9"
+        android:pathData="M0,90 L280,90 L280,140 L0,140 Z"/>
+
+    <!-- Mountain left -->
+    <path android:fillColor="#66BB6A"
+        android:pathData="M0,90 L50,30 L100,90 Z"/>
+    <path android:fillColor="#A5D6A7"
+        android:pathData="M20,90 L50,44 L80,90 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M44,30 L50,18 L56,30 Z"/>
+
+    <!-- Mountain right -->
+    <path android:fillColor="#4CAF50"
+        android:pathData="M170,90 L220,20 L270,90 Z"/>
+    <path android:fillColor="#81C784"
+        android:pathData="M190,90 L220,35 L250,90 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M214,20 L220,8 L226,20 Z"/>
+
+    <!-- River -->
+    <path android:fillColor="#90CAF9"
+        android:pathData="M100,90 Q120,95 140,90 Q160,85 170,90 L170,110 Q160,105 140,110 Q120,115 100,110 Z"/>
+
+    <!-- UMKM/Market stall -->
+    <path android:fillColor="#FF8F00"
+        android:pathData="M110,60 L170,60 L170,90 L110,90 Z"/>
+    <path android:fillColor="#FFB300"
+        android:pathData="M106,58 L174,58 L174,64 L106,64 Z"/>
+    <path android:fillColor="#E65100"
+        android:pathData="M106,54 L140,45 L174,54 Z"/>
+    <!-- Products on shelf -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M115,68 L125,68 L125,78 L115,78 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M130,68 L140,68 L140,78 L130,78 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M145,68 L155,68 L155,78 L145,78 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M160,68 L165,68 L165,78 L160,78 Z"/>
+    <!-- Colorful products -->
+    <path android:fillColor="#4CAF50" android:pathData="M116,70 L124,70 L124,77 L116,77 Z"/>
+    <path android:fillColor="#FF7043" android:pathData="M131,70 L139,70 L139,77 L131,77 Z"/>
+    <path android:fillColor="#FFB300" android:pathData="M146,70 L154,70 L154,77 L146,77 Z"/>
+    <!-- Door -->
+    <path android:fillColor="#8D6E63"
+        android:pathData="M134,90 L134,78 Q134,75 137,75 L143,75 Q146,75 146,78 L146,90 Z"/>
+
+    <!-- Farmer with hat -->
+    <path android:fillColor="#795548"
+        android:pathData="M35,90 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0"/>
+    <path android:fillColor="#4E342E"
+        android:pathData="M29,90 L29,78 L41,78 L41,90 Z"/>
+    <path android:fillColor="#FF8F00"
+        android:pathData="M25,80 L35,74 L45,80 Z"/>
+    <!-- Walking stick -->
+    <path android:fillColor="#795548"
+        android:strokeColor="#795548"
+        android:strokeWidth="2"
+        android:pathData="M42,78 L50,95"/>
+
+    <!-- Tourist -->
+    <path android:fillColor="#FFCCBC"
+        android:pathData="M240,80 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0"/>
+    <path android:fillColor="#1976D2"
+        android:pathData="M234,80 L234,68 L246,68 L246,80 Z"/>
+    <!-- Camera -->
+    <path android:fillColor="#37474F"
+        android:pathData="M248,72 L258,72 L258,80 L248,80 Z"/>
+    <path android:fillColor="#546E7A"
+        android:pathData="M253,73 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"/>
+
+    <!-- Sun -->
+    <path android:fillColor="#FFD54F"
+        android:pathData="M250,18 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0"/>
+    <!-- Sun rays -->
+    <path android:fillColor="#FFD54F"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="2"
+        android:pathData="M250,0 L250,6"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="2"
+        android:pathData="M265,5 L261,9"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="2"
+        android:pathData="M272,18 L266,18"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="2"
+        android:pathData="M265,31 L261,27"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="2"
+        android:pathData="M235,5 L239,9"/>
+
+    <!-- Trees -->
+    <path android:fillColor="#388E3C"
+        android:pathData="M85,90 L85,110 L90,110 L90,90 Z"/>
+    <path android:fillColor="#4CAF50"
+        android:pathData="M87,92 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"/>
+
+    <path android:fillColor="#388E3C"
+        android:pathData="M185,90 L185,110 L190,110 L190,90 Z"/>
+    <path android:fillColor="#4CAF50"
+        android:pathData="M187,92 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"/>
+
+</vector>

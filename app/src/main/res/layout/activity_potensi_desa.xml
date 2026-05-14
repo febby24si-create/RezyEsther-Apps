@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryGreen"
+        app:title="Potensi Desa"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        app:navigationIcon="@drawable/ic_back"
+        android:elevation="4dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero Illustration -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_menu_teal"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingBottom="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Potensi Desa Kami"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kekayaan alam, wisata, dan UMKM unggulan"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:src="@drawable/ic_potensi_illustration"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+
+            <!-- Category Tabs (visual only) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="16dp"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏞️" android:textSize="22sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Wisata" android:textSize="11sp" android:textColor="@color/darkText"
+                            android:fontFamily="@font/poppins" android:textStyle="bold" android:gravity="center"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="3dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏪" android:textSize="22sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="UMKM" android:textSize="11sp" android:textColor="@color/darkText"
+                            android:fontFamily="@font/poppins" android:textStyle="bold" android:gravity="center"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🌾" android:textSize="22sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Pertanian" android:textSize="11sp" android:textColor="@color/darkText"
+                            android:fontFamily="@font/poppins" android:textStyle="bold" android:gravity="center"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Section: Wisata -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="4dp" android:layout_height="24dp"
+                    android:background="#00695C" android:layout_marginEnd="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Destinasi Wisata" android:textColor="@color/darkText"
+                    android:textSize="17sp" android:fontFamily="@font/poppins" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Wisata Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="100dp"
+                        android:background="@drawable/bg_menu_teal" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏞️" android:textSize="48sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Bukit Panorama Hijau" android:textColor="@color/darkText"
+                            android:textSize="15sp" android:fontFamily="@font/poppins" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Hamparan perbukitan hijau dengan pemandangan indah dan udara segar khas desa pegunungan"
+                            android:textColor="@color/mediumText" android:textSize="12sp"
+                            android:fontFamily="@font/poppins" android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginTop="10dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📍 Blok Utara" android:textColor="@color/mediumText"
+                                android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="⭐ 4.8 / 5" android:textColor="@color/accentOrange"
+                                android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Wisata Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="100dp"
+                        android:background="@drawable/bg_menu_blue" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💧" android:textSize="48sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Sumber Mata Air Alami" android:textColor="@color/darkText"
+                            android:textSize="15sp" android:fontFamily="@font/poppins" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Mata air jernih yang mengalir sepanjang tahun menjadi daya tarik ekowisata unggulan desa"
+                            android:textColor="@color/mediumText" android:textSize="12sp"
+                            android:fontFamily="@font/poppins" android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginTop="10dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📍 Blok Selatan" android:textColor="@color/mediumText"
+                                android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="⭐ 4.6 / 5" android:textColor="@color/accentOrange"
+                                android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Section: UMKM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="4dp" android:layout_height="24dp"
+                    android:background="@color/accentOrange" android:layout_marginEnd="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="UMKM Unggulan" android:textColor="@color/darkText"
+                    android:textSize="17sp" android:fontFamily="@font/poppins" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- UMKM Cards horizontal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="28dp"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🎍" android:textSize="32sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Kerajinan Bambu" android:textColor="@color/darkText"
+                            android:textSize="12sp" android:fontFamily="@font/poppins" android:textStyle="bold"
+                            android:gravity="center" android:layout_marginTop="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="12 Pengrajin" android:textColor="@color/mediumText"
+                            android:textSize="10sp" android:fontFamily="@font/poppins" android:gravity="center"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🍃" android:textSize="32sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Produk Herbal" android:textColor="@color/darkText"
+                            android:textSize="12sp" android:fontFamily="@font/poppins" android:textStyle="bold"
+                            android:gravity="center" android:layout_marginTop="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="8 Produsen" android:textColor="@color/mediumText"
+                            android:textSize="10sp" android:fontFamily="@font/poppins" android:gravity="center"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

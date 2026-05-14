@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="140dp"
+    android:viewportWidth="280"
+    android:viewportHeight="140">
+
+    <!-- Background -->
+    <path android:fillColor="#E8F5E9"
+        android:pathData="M0,0 L280,0 L280,140 L0,140 Z"/>
+
+    <!-- Laptop/Computer -->
+    <path android:fillColor="#37474F"
+        android:pathData="M60,30 L220,30 L220,100 L60,100 Z"/>
+    <path android:fillColor="#546E7A"
+        android:pathData="M65,35 L215,35 L215,95 L65,95 Z"/>
+    <path android:fillColor="#263238"
+        android:pathData="M40,104 L240,104 L240,112 L40,112 Z"/>
+
+    <!-- Screen content -->
+    <path android:fillColor="#4CAF50"
+        android:pathData="M75,42 L145,42 L145,60 L75,60 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M75,65 L205,65 L205,70 L75,70 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M75,73 L175,73 L175,78 L75,78 Z"/>
+    <path android:fillColor="#81C784"
+        android:pathData="M155,42 L205,42 L205,88 L155,88 Z"/>
+    <!-- Chart bars on screen -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M160,85 L168,85 L168,72 L160,72 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M171,85 L179,85 L179,65 L171,65 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M182,85 L190,85 L190,70 L182,70 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M193,85 L201,85 L201,60 L193,60 Z"/>
+
+    <!-- Mobile phone -->
+    <path android:fillColor="#37474F"
+        android:pathData="M230,50 L260,50 L260,120 L230,120 Z"/>
+    <path android:fillColor="#546E7A"
+        android:pathData="M233,55 L257,55 L257,112 L233,112 Z"/>
+    <path android:fillColor="#2E7D32"
+        android:pathData="M233,55 L257,55 L257,75 L233,75 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M236,58 L254,58 L254,62 L236,62 Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M236,65 L248,65 L248,68 L236,68 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M236,78 L248,78 L248,82 L236,82 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M236,85 L254,85 L254,89 L236,89 Z"/>
+    <path android:fillColor="#90CAF9"
+        android:pathData="M236,92 L244,92 L244,96 L236,96 Z"/>
+    <!-- Home button -->
+    <path android:fillColor="#455A64"
+        android:pathData="M242,115 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+
+    <!-- People icons -->
+    <path android:fillColor="#4CAF50"
+        android:pathData="M20,80 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/>
+    <path android:fillColor="#4CAF50"
+        android:pathData="M8,120 Q8,100 20,100 Q32,100 32,120 Z"/>
+
+    <path android:fillColor="#81C784"
+        android:pathData="M45,85 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0"/>
+    <path android:fillColor="#81C784"
+        android:pathData="M34,120 Q34,105 45,105 Q56,105 56,120 Z"/>
+
+    <!-- Connecting lines (network) -->
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1.5"
+        android:pathData="M32,100 L60,80"/>
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1.5"
+        android:pathData="M56,100 L60,80"/>
+
+    <!-- Stars decoration -->
+    <path android:fillColor="#FFD54F"
+        android:pathData="M10,20 L12,14 L14,20 L8,16 L16,16 Z"/>
+    <path android:fillColor="#FFD54F"
+        android:pathData="M265,30 L267,24 L269,30 L263,26 L271,26 Z"/>
+    <path android:fillColor="#A5D6A7"
+        android:pathData="M270,125 L272,119 L274,125 L268,121 L276,121 Z"/>
+
+</vector>

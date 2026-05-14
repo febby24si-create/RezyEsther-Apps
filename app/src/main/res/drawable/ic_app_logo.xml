@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+
+    <!-- Outer circle -->
+    <path
+        android:fillColor="#E8F5E9"
+        android:pathData="M40,40 m-38,0 a38,38 0 1,0 76,0 a38,38 0 1,0 -76,0" />
+
+    <!-- Inner circle -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M40,40 m-30,0 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0" />
+
+    <!-- House body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,16 L60,32 L60,56 L20,56 L20,32 Z" />
+
+    <!-- Roof -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M40,12 L64,34 L60,34 L40,16 L20,34 L16,34 Z" />
+
+    <!-- Door -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M35,56 L35,44 Q35,41 38,41 L42,41 Q45,41 45,44 L45,56 Z" />
+
+    <!-- Windows -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M24,38 L32,38 L32,46 L24,46 Z" />
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M48,38 L56,38 L56,46 L48,46 Z" />
+
+    <!-- Signal waves -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:strokeColor="#A5D6A7"
+        android:strokeWidth="1.5"
+        android:pathData="M40,62 m-1,0 a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#A5D6A7"
+        android:strokeWidth="1.5"
+        android:pathData="M36,65 Q40,61 44,65" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#A5D6A7"
+        android:strokeWidth="1.5"
+        android:pathData="M33,68 Q40,60 47,68" />
+
+</vector>
