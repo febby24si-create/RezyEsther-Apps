@@ -5,23 +5,27 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.rezy_esther.R
 import com.example.rezy_esther.databinding.ActivityLoginBinding
-import com.example.rezy_esther.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-
-    companion object {
-        private const val VALID_USERNAME = "admin"
-        private const val VALID_PASSWORD = "123"
-    }
+    private lateinit var userPref: android.content.SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inisialisasi SharedPreferences untuk data user
+        userPref = getSharedPreferences("USER_DATA_PREF", MODE_PRIVATE)
+
+        // Cek apakah sudah login sebelumnya
+        val loginPref = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
+        if (loginPref.getBoolean("isLogin", false)) {
+            navigateToMain()
+            return
+        }
 
         setupAnimations()
         setupClickListeners()
@@ -37,50 +41,99 @@ class LoginActivity : AppCompatActivity() {
             val username = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
 
+            // Reset errors
+            binding.tilUsername.error = null
+            binding.tilPassword.error = null
+
+            // Validasi kosong
             if (username.isEmpty()) {
                 binding.tilUsername.error = "Username tidak boleh kosong"
                 return@setOnClickListener
-            } else {
-                binding.tilUsername.error = null
             }
 
             if (password.isEmpty()) {
                 binding.tilPassword.error = "Password tidak boleh kosong"
                 return@setOnClickListener
-            } else {
-                binding.tilPassword.error = null
             }
 
-            if (username == VALID_USERNAME && password == VALID_PASSWORD) {
-                doLogin()
-            } else {
-                Toast.makeText(this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show()
-                // Shake animation on card
-                binding.loginCard.animate()
-                    .translationX(16f).setDuration(60)
-                    .withEndAction {
-                        binding.loginCard.animate()
-                            .translationX(-16f).setDuration(60)
-                            .withEndAction {
-                                binding.loginCard.animate()
-                                    .translationX(8f).setDuration(60)
-                                    .withEndAction {
-                                        binding.loginCard.animate()
-                                            .translationX(0f).setDuration(60)
-                                            .start()
-                                    }.start()
-                            }.start()
-                    }.start()
+            // ===== SOAL a3: LOGIN DENGAN 2 RULE =====
+            when {
+                // RULE 1: Username = Password (admin = 123 tidak masuk sini, karena admin != 123)
+                username == password -> {
+                    Toast.makeText(this, "Login berhasil (Rule 1: username = password)", Toast.LENGTH_SHORT).show()
+                    doLogin(username)
+                }
+                // RULE 2: Cek ke SharedPreferences user terdaftar
+                isValidUserFromPref(username, password) -> {
+                    Toast.makeText(this, "Login berhasil (Rule 2: user terdaftar)", Toast.LENGTH_SHORT).show()
+                    doLogin(username)
+                }
+                // FALLBACK: Admin default (untuk testing awal sebelum ada user registrasi)
+                username == "admin" && password == "123" -> {
+                    Toast.makeText(this, "Login berhasil (Admin default)", Toast.LENGTH_SHORT).show()
+                    doLogin(username)
+                }
+                else -> {
+                    Toast.makeText(this, "Username atau password salah!", Toast.LENGTH_SHORT).show()
+                    showShakeAnimation()
+                }
             }
+        }
+
+        // Tombol Register
+        binding.tvRegisterLink.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
     }
 
-    private fun doLogin() {
-        // Save login state
-        val sharedPref = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
-        sharedPref.edit().putBoolean("isLogin", true).apply()
+    // ===== SOAL a3: CEK USER DARI SHAREDPREFERENCES =====
+    private fun isValidUserFromPref(username: String, password: String): Boolean {
+        // Ambil data user berdasarkan username
+        val userData = userPref.getString("user_$username", null)
 
-        // Button loading effect
+        if (userData != null) {
+            // Format: "nama|tanggalLahir|jenisKelamin|agama|password"
+            val parts = userData.split("|")
+            if (parts.size == 5) {
+                // parts[4] adalah password
+                return parts[4] == password
+            }
+        }
+        return false
+    }
+
+    private fun showShakeAnimation() {
+        binding.loginCard.animate()
+            .translationX(16f).setDuration(60)
+            .withEndAction {
+                binding.loginCard.animate()
+                    .translationX(-16f).setDuration(60)
+                    .withEndAction {
+                        binding.loginCard.animate()
+                            .translationX(8f).setDuration(60)
+                            .withEndAction {
+                                binding.loginCard.animate()
+                                    .translationX(0f).setDuration(60)
+                                    .start()
+                            }.start()
+                    }.start()
+            }.start()
+    }
+
+    private fun doLogin(username: String) {
+        // Save login state
+        val loginPref = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
+        loginPref.edit()
+            .putBoolean("isLogin", true)
+            .putString("currentUser", username)
+            .apply()
+
+        navigateToMain()
+    }
+
+    private fun navigateToMain() {
         binding.btnLogin.isEnabled = false
         binding.btnLogin.text = "Memuat..."
 
