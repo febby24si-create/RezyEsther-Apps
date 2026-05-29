@@ -50,5 +50,4 @@
             android:name=".WebViewActivity"
             android:exported="false" />
     </application>
-
 </manifest>
