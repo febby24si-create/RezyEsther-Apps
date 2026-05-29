@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.rezy_esther.databinding.FragmentHomeBinding
 import com.google.android.material.chip.Chip
+import com.example.rezy_esther.pertemuan_10.TenthActivity
 import com.google.android.material.snackbar.Snackbar
-
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -117,6 +117,7 @@ class HomeFragment : Fragment() {
             binding.cardProgram,
             binding.cardPotensi,
             binding.cardWebsite,
+            binding.cardDirektori,  // tambahkan ini
             binding.cardLogout
         )
         cards.forEachIndexed { index, card ->
@@ -160,7 +161,14 @@ class HomeFragment : Fragment() {
                     android.R.anim.fade_in, android.R.anim.fade_out)
             }.start()
         }
-
+        binding.cardDirektori.setOnClickListener {
+            it.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100).withEndAction {
+                it.animate().scaleX(1f).scaleY(1f).setDuration(100).start()
+                startActivity(Intent(requireContext(), TenthActivity::class.java))
+                requireActivity().overridePendingTransition(
+                    android.R.anim.fade_in, android.R.anim.fade_out)
+            }.start()
+        }
         binding.cardLogout.setOnClickListener { showLogoutDialog() }
     }
 

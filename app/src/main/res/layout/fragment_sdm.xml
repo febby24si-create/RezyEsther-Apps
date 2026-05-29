@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header SDM -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/primaryGreenDark">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👥 Data Sumber Daya Manusia"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Penduduk: 2.847 Jiwa"
+                    android:textColor="@color/lightGreen"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stat Demografi 3 kolom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👨" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="1.423"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Laki-laki"
+                        android:textColor="@color/mediumText"
+                        android:textSize="10sp" android:fontFamily="@font/poppins" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👩" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="1.424"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:textColor="@color/mediumText"
+                        android:textSize="10sp" android:fontFamily="@font/poppins" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏠" android:textSize="24sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="784"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="KK"
+                        android:textColor="@color/mediumText"
+                        android:textSize="10sp" android:fontFamily="@font/poppins" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Tingkat Pendidikan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tingkat Pendidikan"
+            android:textColor="@color/darkText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Bar chart sederhana -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- SD -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                        android:text="SD" android:textColor="@color/mediumText"
+                        android:textSize="12sp" android:fontFamily="@font/poppins" />
+                    <ProgressBar android:layout_width="0dp" android:layout_height="10dp"
+                        android:layout_weight="1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progress="72" android:progressTint="@color/primaryGreenLight"
+                        android:max="100" />
+                    <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="72%" android:textColor="@color/primaryGreen"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"
+                        android:textStyle="bold" android:gravity="end" />
+                </LinearLayout>
+
+                <!-- SMP -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                        android:text="SMP" android:textColor="@color/mediumText"
+                        android:textSize="12sp" android:fontFamily="@font/poppins" />
+                    <ProgressBar android:layout_width="0dp" android:layout_height="10dp"
+                        android:layout_weight="1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progress="55" android:progressTint="@color/primaryGreenLight"
+                        android:max="100" />
+                    <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="55%" android:textColor="@color/primaryGreen"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"
+                        android:textStyle="bold" android:gravity="end" />
+                </LinearLayout>
+
+                <!-- SMA -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                        android:text="SMA" android:textColor="@color/mediumText"
+                        android:textSize="12sp" android:fontFamily="@font/poppins" />
+                    <ProgressBar android:layout_width="0dp" android:layout_height="10dp"
+                        android:layout_weight="1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progress="38" android:progressTint="@color/primaryGreenLight"
+                        android:max="100" />
+                    <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="38%" android:textColor="@color/primaryGreen"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"
+                        android:textStyle="bold" android:gravity="end" />
+                </LinearLayout>
+
+                <!-- S1+ -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="80dp" android:layout_height="wrap_content"
+                        android:text="S1/D3" android:textColor="@color/mediumText"
+                        android:textSize="12sp" android:fontFamily="@font/poppins" />
+                    <ProgressBar android:layout_width="0dp" android:layout_height="10dp"
+                        android:layout_weight="1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progress="18" android:progressTint="@color/accentOrange"
+                        android:max="100" />
+                    <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="18%" android:textColor="@color/accentOrange"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"
+                        android:textStyle="bold" android:gravity="end" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Mata Pencaharian -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mata Pencaharian"
+            android:textColor="@color/darkText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="4dp"
+                app:cardCornerRadius="12dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🌾" android:textSize="26sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="45%"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Petani"
+                        android:textColor="@color/mediumText"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginHorizontal="4dp"
+                app:cardCornerRadius="12dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏪" android:textSize="26sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="28%"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pedagang"
+                        android:textColor="@color/mediumText"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="4dp"
+                app:cardCornerRadius="12dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🔧" android:textSize="26sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="27%"
+                        android:textColor="@color/primaryGreen"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:fontFamily="@font/poppins" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Lainnya"
+                        android:textColor="@color/mediumText"
+                        android:textSize="11sp" android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tab_icon_selector.xml — warna icon tab: putih saat aktif, hijau muda saat tidak aktif -->
+<!-- Simpan di: res/color/tab_icon_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/white" android:state_selected="true" />
+    <item android:color="@color/lightGreen" />
+</selector>
