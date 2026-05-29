@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header hijau -->
+            <!-- Header Hijau -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
 
             </LinearLayout>
 
-            <!-- Illustration card -->
+            <!-- Illustration Card -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                         android:padding="16dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="140dp"
                             android:src="@drawable/ic_village_illustration"
                             android:scaleType="fitCenter" />
                         <TextView
@@ -193,7 +193,83 @@
 
             </LinearLayout>
 
-            <!-- Section label -->
+            <!-- ✅ SECTION: CHIP & CHIPGROUP FILTER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter Layanan"
+                    android:textColor="@color/darkText"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- ChipGroup single selection -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:chipSpacingHorizontal="6dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSemua"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🗂 Semua"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins"
+                        android:checked="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPerhitungan"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📐 Perhitungan"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipProgram"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏘 Program"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPotensi"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌄 Potensi"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipOnline"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌐 Online"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
+            <!-- Section Label Menu -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -203,10 +279,11 @@
                 android:fontFamily="@font/poppins"
                 android:textStyle="bold"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="4dp" />
 
             <TextView
+                android:id="@+id/tvFilterDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pilih layanan yang tersedia"
@@ -216,8 +293,13 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="12dp" />
 
+            <!-- ✅ GRIDLAYOUT — 2x2 Menu Utama -->
+            <!-- Keterangan: GridLayout dipakai di fragment_about.xml untuk FAQ section -->
+            <!-- Di Home, tetap pakai struktur card yang sudah ada -->
+
             <!-- Row 1 menu -->
             <LinearLayout
+                android:id="@+id/rowMenu1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -312,6 +394,7 @@
 
             <!-- Row 2 menu -->
             <LinearLayout
+                android:id="@+id/rowMenu2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

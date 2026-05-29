@@ -142,7 +142,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Topik / Judul -->
+            <!-- ✅ GRIDLAYOUT — Topik Utama SiPedes (2 kolom) -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,12 +158,13 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
+                    <!-- Header Section -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:layout_marginBottom="14dp">
+                        android:layout_marginBottom="16dp">
                         <View
                             android:layout_width="4dp"
                             android:layout_height="24dp"
@@ -179,72 +180,181 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Topik item -->
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@color/primaryGreen" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Digitalisasi Pelayanan Desa"
-                                android:textColor="@color/darkText" android:textSize="13sp"
-                                android:fontFamily="@font/poppins" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Layanan administrasi desa secara online dan efisien"
-                                android:textColor="@color/mediumText" android:textSize="11sp"
-                                android:fontFamily="@font/poppins"/>
-                        </LinearLayout>
-                    </LinearLayout>
+                    <!-- ✅ GridLayout 2 Kolom untuk Topik -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2"
+                        app:rowCount="2"
+                        app:useDefaultMargins="false">
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@color/primaryGreen" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Infrastruktur Teknologi Desa"
-                                android:textColor="@color/darkText" android:textSize="13sp"
-                                android:fontFamily="@font/poppins" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Penyediaan jaringan internet dan perangkat TIK"
-                                android:textColor="@color/mediumText" android:textSize="11sp"
-                                android:fontFamily="@font/poppins"/>
-                        </LinearLayout>
-                    </LinearLayout>
+                        <!-- Item 1: Digitalisasi Pelayanan -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#F1F8E9"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="6dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal">
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@color/primaryGreen" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Pemberdayaan SDM Desa"
-                                android:textColor="@color/darkText" android:textSize="13sp"
-                                android:fontFamily="@font/poppins" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Pelatihan literasi digital bagi warga dan perangkat desa"
-                                android:textColor="@color/mediumText" android:textSize="11sp"
-                                android:fontFamily="@font/poppins"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🏛️"
+                                android:textSize="24sp"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Digitalisasi Pelayanan"
+                                android:textColor="@color/darkText"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Administrasi desa online"
+                                android:textColor="@color/mediumText"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center"
+                                android:layout_marginTop="3dp" />
                         </LinearLayout>
-                    </LinearLayout>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical">
-                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@color/primaryGreen" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Pengembangan Ekonomi Digital"
-                                android:textColor="@color/darkText" android:textSize="13sp"
-                                android:fontFamily="@font/poppins" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="UMKM desa masuk ekosistem e-commerce nasional"
-                                android:textColor="@color/mediumText" android:textSize="11sp"
-                                android:fontFamily="@font/poppins"/>
+                        <!-- Item 2: Infrastruktur TIK -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/softBlue"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginBottom="6dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📡"
+                                android:textSize="24sp"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Infrastruktur TIK"
+                                android:textColor="@color/darkText"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jaringan &amp; perangkat TIK"
+                                android:textColor="@color/mediumText"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center"
+                                android:layout_marginTop="3dp" />
                         </LinearLayout>
-                    </LinearLayout>
+
+                        <!-- Item 3: SDM Digital -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/softGray"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👩‍💻"
+                                android:textSize="24sp"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SDM Digital"
+                                android:textColor="@color/darkText"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pelatihan literasi digital"
+                                android:textColor="@color/mediumText"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center"
+                                android:layout_marginTop="3dp" />
+                        </LinearLayout>
+
+                        <!-- Item 4: Ekonomi Digital -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#FFF8E1"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🛒"
+                                android:textSize="24sp"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ekonomi Digital"
+                                android:textColor="@color/darkText"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UMKM desa e-commerce"
+                                android:textColor="@color/mediumText"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center"
+                                android:layout_marginTop="3dp" />
+                        </LinearLayout>
+
+                    </androidx.gridlayout.widget.GridLayout>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Fitur Aplikasi -->
+            <!-- ✅ LISTVIEW FAQ — dengan fixed height agar bisa di NestedScrollView -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -258,14 +368,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:paddingTop="20dp"
+                    android:paddingHorizontal="0dp"
+                    android:paddingBottom="8dp">
 
+                    <!-- Header FAQ -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:layout_marginBottom="14dp">
+                        android:layout_marginBottom="12dp"
+                        android:paddingHorizontal="20dp">
                         <View
                             android:layout_width="4dp"
                             android:layout_height="24dp"
@@ -274,87 +388,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Fitur Unggulan"
+                            android:text="FAQ — Pertanyaan Umum"
                             android:textColor="@color/darkText"
                             android:textSize="17sp"
                             android:fontFamily="@font/poppins"
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Grid fitur 2x2 -->
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:layout_marginBottom="10dp" android:weightSum="2">
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical"
-                            android:background="@color/softGray" android:padding="12dp"
-                            android:layout_marginEnd="6dp" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="📐" android:textSize="24sp" android:gravity="center"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Rumus Bangun" android:textColor="@color/darkText"
-                                android:textSize="11sp" android:fontFamily="@font/poppins"
-                                android:textStyle="bold" android:gravity="center" android:layout_marginTop="6dp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Kalkulator geometri datar &amp; ruang"
-                                android:textColor="@color/mediumText" android:textSize="9sp"
-                                android:fontFamily="@font/poppins" android:gravity="center" android:layout_marginTop="2dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical"
-                            android:background="@color/softBlue" android:padding="12dp"
-                            android:layout_marginStart="6dp" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="🏘️" android:textSize="24sp" android:gravity="center"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Program Desa" android:textColor="@color/darkText"
-                                android:textSize="11sp" android:fontFamily="@font/poppins"
-                                android:textStyle="bold" android:gravity="center" android:layout_marginTop="6dp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Info kegiatan digitalisasi desa"
-                                android:textColor="@color/mediumText" android:textSize="9sp"
-                                android:fontFamily="@font/poppins" android:gravity="center" android:layout_marginTop="2dp"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:weightSum="2">
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical"
-                            android:background="#E8F5E9" android:padding="12dp"
-                            android:layout_marginEnd="6dp" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="🌄" android:textSize="24sp" android:gravity="center"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Potensi Desa" android:textColor="@color/darkText"
-                                android:textSize="11sp" android:fontFamily="@font/poppins"
-                                android:textStyle="bold" android:gravity="center" android:layout_marginTop="6dp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Wisata, UMKM &amp; budaya lokal"
-                                android:textColor="@color/mediumText" android:textSize="9sp"
-                                android:fontFamily="@font/poppins" android:gravity="center" android:layout_marginTop="2dp"/>
-                        </LinearLayout>
-
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:orientation="vertical"
-                            android:background="#FFF8E1" android:padding="12dp"
-                            android:layout_marginStart="6dp" android:gravity="center">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="🌐" android:textSize="24sp" android:gravity="center"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Website SiPedes" android:textColor="@color/darkText"
-                                android:textSize="11sp" android:fontFamily="@font/poppins"
-                                android:textStyle="bold" android:gravity="center" android:layout_marginTop="6dp"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Portal informasi desa online"
-                                android:textColor="@color/mediumText" android:textSize="9sp"
-                                android:fontFamily="@font/poppins" android:gravity="center" android:layout_marginTop="2dp"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
+                    <!-- ListView FAQ non-scrollable (gunakan expandableListView dibungkus LL) -->
+                    <LinearLayout
+                        android:id="@+id/llFaqContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp" />
 
                 </LinearLayout>
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_faq_item"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="5dp"
+    android:padding="16dp">
+
+    <!-- Row atas: icon + pertanyaan + arrow -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Emoji Icon -->
+        <TextView
+            android:id="@+id/tvFaqIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="❓"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="#F1F8E9"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Pertanyaan -->
+        <TextView
+            android:id="@+id/tvFaqPertanyaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Apa itu SiPedes?"
+            android:textColor="#263238"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Arrow toggle -->
+        <ImageView
+            android:id="@+id/ivFaqArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_back"
+            android:rotation="-90"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Jawaban (tersembunyi, tampil saat diklik) -->
+    <TextView
+        android:id="@+id/tvFaqJawaban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SiPedes adalah platform digital..."
+        android:textColor="#546E7A"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="48dp"
+        android:visibility="gone"
+        android:paddingBottom="4dp" />
+
+</LinearLayout>
