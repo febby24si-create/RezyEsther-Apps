@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header Hijau -->
+            <!-- ===== HEADER HIJAU ===== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,7 +96,6 @@
 
                 </LinearLayout>
 
-                <!-- Info card dalam header -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -143,7 +142,7 @@
 
             </LinearLayout>
 
-            <!-- Illustration Card -->
+            <!-- ===== ILLUSTRATION CARD ===== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,7 +192,7 @@
 
             </LinearLayout>
 
-            <!-- ✅ SECTION: CHIP & CHIPGROUP FILTER -->
+            <!-- ===== CHIP FILTER ===== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -211,7 +210,6 @@
                     android:textStyle="bold"
                     android:layout_marginBottom="8dp" />
 
-                <!-- ChipGroup single selection -->
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/chipGroupFilter"
                     android:layout_width="match_parent"
@@ -266,10 +264,9 @@
                         android:fontFamily="@font/poppins" />
 
                 </com.google.android.material.chip.ChipGroup>
-
             </LinearLayout>
 
-            <!-- Section Label Menu -->
+            <!-- ===== SECTION MENU ===== -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -292,10 +289,6 @@
                 android:fontFamily="@font/poppins"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="12dp" />
-
-            <!-- ✅ GRIDLAYOUT — 2x2 Menu Utama -->
-            <!-- Keterangan: GridLayout dipakai di fragment_about.xml untuk FAQ section -->
-            <!-- Di Home, tetap pakai struktur card yang sudah ada -->
 
             <!-- Row 1 menu -->
             <LinearLayout
@@ -487,6 +480,8 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+            <!-- Direktori -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -545,13 +540,13 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+
             <!-- Logout -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="24dp">
+                android:layout_marginTop="12dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardLogout"
@@ -584,6 +579,166 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+            <!-- ============================================ -->
+            <!-- ✅ SECTION BERITA — BARU                     -->
+            <!-- ============================================ -->
+
+            <!-- Divider + Header Berita -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp">
+
+                <!-- Garis aksen hijau -->
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="22dp"
+                    android:background="@color/primaryGreen"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📡 Berita Terkini"
+                    android:textColor="@color/darkText"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dari Indonesia"
+                    android:textColor="@color/primaryGreen"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+            <!-- Loading State (Shimmer placeholder sederhana) -->
+            <LinearLayout
+                android:id="@+id/shimmerNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Shimmer Card 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:background="#E0E0E0" />
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="14dp"
+                            android:background="#E0E0E0"
+                            android:layout_marginTop="12dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:background="#E8E8E8"
+                            android:layout_marginTop="8dp" />
+                        <View
+                            android:layout_width="280dp"
+                            android:layout_height="12dp"
+                            android:background="#E8E8E8"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Shimmer Card 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:background="#E0E0E0" />
+                        <View
+                            android:layout_width="220dp"
+                            android:layout_height="14dp"
+                            android:background="#E0E0E0"
+                            android:layout_marginTop="12dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:background="#E8E8E8"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Error State -->
+            <TextView
+                android:id="@+id/tvNewsError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Gagal memuat berita"
+                android:textColor="@color/errorRed"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="24dp"
+                android:visibility="gone" />
+
+            <!-- Empty State -->
+            <TextView
+                android:id="@+id/tvNewsEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📭 Belum ada berita tersedia"
+                android:textColor="@color/mediumText"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="24dp"
+                android:visibility="gone" />
+
+            <!-- ✅ RecyclerView Berita -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone"
+                android:layout_marginBottom="24dp" />
 
         </LinearLayout>
 

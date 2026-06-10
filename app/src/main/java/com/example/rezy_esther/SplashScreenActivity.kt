@@ -12,6 +12,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.rezy_esther.databinding.ActivitySplashScreenBinding
 import com.example.rezy_esther.LoginActivity
 import com.example.rezy_esther.MainActivity
+import com.example.rezy_esther.onboarding.OnBoardingActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
@@ -65,26 +66,32 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private fun navigateAfterDelay() {
         Handler(Looper.getMainLooper()).postDelayed({
-            val sharedPref = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
-            val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            // Menentukan halaman tujuan berdasarkan status login
-            val intent = if (isLogin) {
-                Intent(this, MainActivity::class.java)
-            } else {
-                Intent(this, LoginActivity::class.java)
+            // ✅ CEK 1: Apakah sudah login?
+            val loginPref = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
+            val isLogin = loginPref.getBoolean("isLogin", false)
+
+            // ✅ CEK 2: Apakah onboarding sudah pernah ditampilkan?
+            val onBoardPref = getSharedPreferences("ONBOARDING_PREF", MODE_PRIVATE)
+            val isOnBoardingDone = onBoardPref.getBoolean("isOnBoardingDone", false)
+
+            // ✅ ALUR NAVIGASI:
+            // Login → MainActivity
+            // Belum login + OnBoarding sudah → LoginActivity
+            // Belum login + OnBoarding belum → OnBoardingActivity
+            val intent = when {
+                isLogin -> Intent(this, MainActivity::class.java)
+                isOnBoardingDone -> Intent(this, LoginActivity::class.java)
+                else -> Intent(this, OnBoardingActivity::class.java)
             }
 
-            // Animasi menghilang (fade out) sebelum pindah halaman
             binding.splashRoot.animate()
-                .alpha(0f)
-                .setDuration(400)
+                .alpha(0f).setDuration(400)
                 .withEndAction {
                     startActivity(intent)
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                     finish()
-                }
-                .start()
+                }.start()
 
         }, 2500)
     }
