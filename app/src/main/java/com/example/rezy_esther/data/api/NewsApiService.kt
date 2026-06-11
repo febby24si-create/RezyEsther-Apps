@@ -6,10 +6,6 @@ import retrofit2.http.Query
 
 interface NewsApiService {
 
-    /**
-     * Top headlines Indonesia
-     * https://gnews.io/api/v4/top-headlines?country=id&lang=id&token=...
-     */
     @GET("v4/top-headlines")
     suspend fun getTopHeadlines(
         @Query("country")  country: String  = "id",
@@ -18,10 +14,6 @@ interface NewsApiService {
         @Query("token")    token: String
     ): NewsResponse
 
-    /**
-     * Search berita — fallback jika top-headlines kosong
-     * https://gnews.io/api/v4/search?q=indonesia&lang=id&token=...
-     */
     @GET("v4/search")
     suspend fun searchNews(
         @Query("q")        query: String,

@@ -35,7 +35,6 @@ class NewsRepository {
 
             if (valid.isEmpty()) fetchFallback()
             else Result.success(valid)
-
         } catch (e: Exception) {
             Log.e(TAG, "Error top-headlines: ${e.javaClass.simpleName} — ${e.message}")
             fetchFallback()
